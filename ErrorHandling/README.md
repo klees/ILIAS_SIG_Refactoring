@@ -78,7 +78,7 @@ error handling in ILIAS, where future steps could provide even more improvements
 * The errors could be used to generate appropriate HTTP status codes, making it
   easier to monitor running ILIAS systems for different error modes.
 * The top level exception handler could depend on the context ILIAS currently runs
-  in and thus provide different error handling for the different contexts (Wen, SOAP
+  in and thus provide different error handling for the different contexts (Web, SOAP
   Cron, ...).
 
 
