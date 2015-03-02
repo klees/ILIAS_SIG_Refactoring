@@ -38,7 +38,7 @@ of Development.
 
 A top level exception handler should be introduced, that catches all exceptions
 that aren't caught and handled in the code. This exception handler should be provided
-by (Whoops)[https://github.com/filp/whoops].
+by [Whoops](https://github.com/filp/whoops).
 
 Whoops is an error handling framework that is able to create developer friendly 
 error pages out of the box, showing the exception, the code it was thrown from 
