@@ -1,4 +1,4 @@
-# Improvement of ILIAS Error Handling (DRAFT 1)
+# Improvement of ILIAS Error Handling 
 
 The improvement of error handling in ILIAS was chosen to be the first project
 of the SIG Refactoring on the [first meeting of the SIG on 2015-01-28](http://www.ilias.de/docu/ilias.php?ref_id=4516&cmd=sendfile&cmdClass=ilrepositorygui&cmdNode=65&baseClass=ilRepositoryGUI).
@@ -81,5 +81,8 @@ error handling in ILIAS, where future steps could provide even more improvements
   in and thus provide different error handling for the different contexts (Web, SOAP
   Cron, ...).
 
+## Status
+
+This proposal was accepted on the [Jour Fixe of the ILIAS e.V. on 2015-03-02](http://www.ilias.de/docu/goto.php?target=wiki_1357_JourFixe-2015-03-02).
 
 
