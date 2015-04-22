@@ -1,0 +1,54 @@
+WholeIliasCodebase = PhpDependency with name:"il*"
+GUIClasses = PhpDependency with name:"*GUI*"
+triggerError = PhpDependency with name:"trigger_error"
+ilLanguageGlobal = PhpDependency with name:"GLOBAL\lng"
+ilLanguageClass = PhpDependency with name:"ilLanguage"
+ilLanguage = {ilLanguageClass, ilLanguageGlobal}
+exitOrDie = PhpDependency with name:"exit/die"
+eval = PhpDependency with name:"eval"
+ilTopLevelException = PhpDependency with name:"ilException"
+ilExceptions = PhpDependency with name:"il*Exception*"
+ilExceptionsWithoutTopLevelException = {ilExceptions} except {ilTopLevelException} 
+SuppressErrors = PhpDependency with name:"@"
+
+/**
+ * The global php function trigger_error is a procedural concept. Please ommit this php function and use an ILIAS exception instead.
+ */
+WholeIliasCodebase cannot depend on triggerError
+
+/**
+ * Exit and die are a bad idea in both development and production: In development you have no idea what went wrong and in production the user receives a white page and has no idea what's going on. The implemented exception handling does not work if you use exit or die. 
+ *
+ * If you want to send a file consider using: Services/FileDelivery.
+ *
+ * Exception: Currently if you want to output json you most likely have to use exit() at the moment.
+ */
+WholeIliasCodebase cannot depend on exitOrDie
+
+/**
+ * The php function eval() is not good practice. It's use often comes with a high security risk, because it is generally not a trivial task to make sure that a paramater of eval() can be fully trusted. And if it is, then eval() is usually not neccessary. It is also tricky to debug, because it obfuscates control flow. Last but not least, it does not work with HHVM in the special "RepoAuthoritative" mode, which makes PHP run extra-fast.
+ */
+ WholeIliasCodebase cannot depend on eval
+
+
+/**
+ * Silencing errors with the @ operator is bad practice. It makes code uneccessarily harder to debug if the currently suppressed error changes into a real show-stopper bug. Try to handle the possible warnings and errors.
+ */
+WholeIliasCodebase cannot depend on SuppressErrors
+
+/**
+ * The Model of ILIAS should be language independent. Only on the GUI layer the language should be assigned.
+ *
+ * See: http://www.ilias.de/docu/goto_docu_pg_199_42.html
+ *
+ * Exception: You may still need to use ilLanguage on SOAP endpoints.
+ */
+only GUIClasses can depend on ilLanguage
+
+/**
+ * All ILIAS Exceptions must be in a Hierarchy and finally extend ilException Every module/service should define its own top level Exception e.g. ilCourseException where all other exceptions from that module/service extend this service/module Exception.
+ *
+ * See: http://www.ilias.de/docu/goto_docu_pg_42740_42.html
+ */
+ilExceptionsWithoutTopLevelException can only depend on ilExceptions
+
