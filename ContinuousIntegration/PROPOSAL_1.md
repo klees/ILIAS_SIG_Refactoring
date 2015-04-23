@@ -8,8 +8,6 @@ development process. The basis for the discussion were the [results of a survey 
 
 This proposal tries to address some of the concerns regarding the current integration of the CI in the ILIAS development process.
 
-As the current development process is structured around the Jour Fixe, the proposal regards the Jour Fixe as future instance as well. However, as there currently is some uncertainty regarding the development process after the Head of Development announced to quit in September 2015, it could be necessary to change the means by which the objectives of this proposal are achieved in the future.
-
 ## Proposal
 
 ### Central CI Server for Official ILIAS Repository
