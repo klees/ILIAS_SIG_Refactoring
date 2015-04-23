@@ -4,7 +4,7 @@
 
 On its [second meeting](http://www.ilias.de/docu/goto_docu_file_4640_download.html) 
 the SIG Refactoring discussed the integration of the CI Server in the ILIAS
-development process. The basis for the discussion where the [results of a survey for the ILIAS developers](http://www.ilias.de/docu/goto_docu_file_4607_download.html).
+development process. The basis for the discussion were the [results of a survey for the ILIAS developers](http://www.ilias.de/docu/goto_docu_file_4607_download.html).
 
 This proposal tries to address some of the concerns regarding the current integration of the CI in the ILIAS development process.
 
