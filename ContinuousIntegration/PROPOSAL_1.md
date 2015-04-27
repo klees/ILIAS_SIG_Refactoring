@@ -18,16 +18,16 @@ Server is run and administrated by the ILIAS e.V.. This server could be the alre
 implemented Jenkins Server as well as a new solution.
 
 A central CI server would make it possible for all developers (and of course other
-interesed parties) to refer to a common set of rules and results. 
+interesed parties) to refer to a common set of test, rules and results. 
 
 We propose the following set of test:
-- Existing Unit Tests
-- Newly implemented Architectural Tests
+- existing unit tests
+- newly implemented architectural tests
 
 #### Unit Tests
-Currently Unit Tests are by choice of the resposible maintainers. This proposal does
-not include any changes in the handling of Unit Tests. Already existing Unit Tests are 
-included in the CI-Service.
+Currently unit tests are by choice of the responsible maintainers. This proposal does
+not include any changes in the handling of unit tests. Already existing unit tests are 
+included in the CI service..
 
 #### Implement Architectural Tests in CI
 To check architectural rules on the ILIAS code base, [dicto](http://scg.unibe.ch/dicto/)
@@ -39,7 +39,7 @@ to executable tests, thus improving the coherence of the ILIAS code base. E.g.:
 ```
 [dicto]-Rule: WholeIliasCodebase cannot depend on triggerError
 ```
-Meaning: All PHP-Classes in ILIAS should not invoke the PHP-Function trigger_error()  
+Meaning: All PHP classes in ILIAS should not invoke the PHP function trigger_error().
 
 A basic set of rules will be proposed by the SIG Refactoring.
 
