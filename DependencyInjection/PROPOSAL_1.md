@@ -57,28 +57,28 @@ It is not allowed to modify the global pimple container object outside of
 The SIG-Refactoring provides a script to automatically replace the use of globals 
 by the global pimple container, that is transforming
 
-´´´php
+```php
 	global $ilLog;
-´´´
+```
 
 to
 
-´´´php
+```php
 	global $DIC;
 	$ilLog = $DIC["ilLog"];
-´´´
+```
 
 and
 
-´´´php
+```php
 	some_function($GLOBALS["ilLog"]);
-´´´
+```
 
 to
 
-´´´php
+```php
 	some_function($GLOBALS["DIC"]["ilLog"]);
-´´´
+```
 
 As it won't be possible to replace all globals with a script based on regular
 expression, the script provided by the SIG Refactoring will also flag possibly
