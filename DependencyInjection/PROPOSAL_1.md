@@ -43,14 +43,14 @@ do for the migration.
 
 ### Deprecating the Initialisation of Globals besided the Pimple Container Object
 
-The initialisation of globals outside of ilInitialisation is deprecated with the
+The initialisation of globals outside of `ilInitialisation` is deprecated with the
 beginning of the ILIAS 5.2 development. An appropriate rule for the CI is 
 introduced as soon as possible to asses the amount of necessary amount of work.
 
 ### Forbid the Modification of the Global Pimple Container Object
 
 It is not allowed to modify the global pimple container object outside of 
-ilInitialisation. This is check by an appropriate rule in the ILIAS-CI.
+`ilInitialisation`. This is check by an appropriate rule in the ILIAS-CI.
 
 ### Migrating Globals to Global Registry
 
@@ -89,13 +89,13 @@ Every ILIAS developer is responsible to migrate the code she maintains, starting
 with the development of ILIAS 5.2..
 
 The SIG Refactoring will provide a pull request to the ILIAS repo that pairs
-initialisations of globals in ilInitialisation by a corresponding initialisation
+initialisations of globals in `ilInitialisation` by a corresponding initialisation
 of the pimple container. During the migration phase it will be possible to use
 the old globals and the new pimple container object as well.
 
 When the migration of the user sides of globals are completed, the SIG refactoring
 will provide a pull request that removes the initialisation of globals in the
-ilInitialisation completely.
+`ilInitialisation` completely.
 
 ### Outlook
 
