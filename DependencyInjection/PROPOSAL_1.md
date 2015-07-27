@@ -28,6 +28,10 @@ be easily possible to maintain Pimple as a part of ILIAS.
 
 ### Introduction of a Global Pimple Container Object
 
+A global instance of a pimple container is introduced in the `ilInitialisation`.
+It is created as first step of the initialisation process in `ilInitalisation::initILIAS`.
+The name of the global is `$DIC`.
+
 ### Deprecating all Globals besides Pimple Container Object
 
 The use of any global in the ILIAS core besides the global pimple container
