@@ -1,4 +1,4 @@
-# Improve Integration of CI in the ILIAS Development Process (Draft)
+# Improve Integration of CI in the ILIAS Development Process (accepted)
 
 ## Intent
 
