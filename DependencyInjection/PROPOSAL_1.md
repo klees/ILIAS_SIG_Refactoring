@@ -45,12 +45,12 @@ do for the migration.
 
 The initialisation of globals outside of `ilInitialisation` is deprecated with the
 beginning of the ILIAS 5.2 development. An appropriate rule for the CI is 
-introduced as soon as possible to asses the amount of necessary amount of work.
+introduced as soon as possible to asses the amount of work to do for the migration.
 
 ### Forbid the Modification of the Global Pimple Container Object
 
 It is not allowed to modify the global pimple container object outside of 
-`ilInitialisation`. This is check by an appropriate rule in the ILIAS-CI.
+`ilInitialisation`. This is checked by an appropriate rule in the ILIAS-CI.
 
 ### Migrating Globals to Global Registry
 
@@ -100,7 +100,7 @@ will provide a pull request that removes the initialisation of globals in the
 ### Outlook
 
 The introduction of a global container object as registry for globals only is
-the first step towards getting rid of global in ILIAS completely.
+the first step towards getting rid of globals in ILIAS completely.
 A possible next step is to overhaul the ILIAS initialisation to use the 
 capabilities of the DIC to a greater extent. The DIC could supersede the current 
 ILIAS initialisation, where the order in which the global services are 
